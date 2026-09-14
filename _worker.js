@@ -6,19 +6,18 @@
  *       本 Worker 负责加 Cache-Control + 边缘 Cache API 永久缓存。
  *
  * 缓存策略：
- *   - 静态资源（css/js/图片/字体/视频…）：永久缓存（max-age=1年 + immutable）。
- *   - HTML/其他文档：长缓存 + 后台重验（stale-while-revalidate）。
- *     把下方 PERMANENT_HTML 改为 true 可让 HTML 也永久缓存（发布后需 Purge 才更新）。
+ *   - 静态页全部内容（HTML/css/js/图片/字体/视频…）：永久缓存（max-age=1年 + immutable）。
+ *     发布新版后需到 CF 后台 Caching → Purge Everything，或在 URL 加 ?v=2 强制刷新。
  *   - Range 请求（音视频拖动）与非 GET：绕过缓存，直接交给 Assets。
  *
- * 自测：访问页面刷新一次，看响应头 CF-Cache-Status 从 MISS 变 HIT 即生效。
+ * 自测：访问页面刷新一次，看响应头 X-Cache 从 MISS 变 HIT 即生效。
  * --------------------------------------------------------------------------
  */
 
 const ONE_YEAR = 31536000;
 
-// true = HTML 也永久缓存（发布后必须到 CF 后台 Caching → Purge Everything 才更新）
-const PERMANENT_HTML = false;
+// 静态页全部永久缓存（发布新版后必须 Purge Everything 才更新）
+const PERMANENT_HTML = true;
 
 // 需要“永久缓存”的静态资源扩展名
 const ASSET_RE = /\.(css|js|mjs|json|map|png|jpe?g|webp|avif|gif|svg|ico|woff2?|ttf|otf|eot|mp4|webm|ogg|mp3|wav|pdf|webmanifest)$/i;
