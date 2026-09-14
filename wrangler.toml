@@ -1,0 +1,10 @@
+name = "achen-app-download-cache"
+main = "worker.js"
+compatibility_date = "2025-09-14"
+
+# 方式一：绑定到下载页域名（在 CF 后台 Workers Routes 也可配）
+# route = "download.hoarfall.com/*"
+# zone_name = "hoarfall.com"
+
+# 方式二：若用 Cloudflare Pages 托管本下载页，
+# 删除本文件，把 worker.js 改名为 functions/[[path]].js 即可。

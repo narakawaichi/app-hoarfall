@@ -1,0 +1,35 @@
+/* ============ 跑马灯 ============ */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  background: rgba(255,255,255,0.015);
+  padding: 20px 0;
+  position: relative;
+  z-index: 3;
+}
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  width: max-content;
+  font-family: var(--font-display);
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee-track span {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.marquee-track .dot {
+  color: var(--pink);
+  font-size: 10px;
+}
+.marquee-track span:nth-child(4n+1) { color: var(--pink-soft); }
+.marquee-track span:nth-child(4n+3) { color: var(--purple-soft); }

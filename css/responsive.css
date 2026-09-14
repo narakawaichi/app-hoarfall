@@ -1,0 +1,52 @@
+/* ============ 响应式 ============ */
+@media (max-width: 1300px) {
+  .vertical-tag { display: none; }
+}
+
+@media (max-width: 1100px) {
+  .hero-content { grid-template-columns: 1fr; gap: 60px; }
+  .hero-right { order: -1; }
+  .phone-scene { transform: rotateY(-10deg) rotateX(4deg) scale(0.85); }
+  .vertical-tag { display: none; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .g-1, .g-2, .g-5, .g-6 { grid-column: span 2; }
+  .g-3, .g-4 { grid-column: span 1; }
+}
+
+@media (max-width: 700px) {
+  .nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 120px 20px 60px; }
+  .hero-jp { font-size: 40vw; }
+  .hero-stats { gap: 24px; }
+  .stat-num { font-size: 22px; }
+  .section { padding: 80px 20px; }
+  .section-header { grid-template-columns: 1fr; gap: 20px; }
+  .section-num { font-size: 60px; }
+  .feature-row { grid-template-columns: 50px 1fr; gap: 20px; padding: 28px 0; }
+  .feature-icon-box { display: none; }
+  .feature-body h3 { font-size: 18px; }
+  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .g-1, .g-2, .g-3, .g-4, .g-5, .g-6 { grid-column: span 1; grid-row: span 1; }
+  .phone-scene { transform: rotateY(-6deg) rotateX(2deg) scale(0.72); }
+  .final-cta { padding: 80px 20px; }
+  .hero-actions { width: 100%; }
+  .btn { flex: 1; justify-content: center; min-width: 160px; }
+}
+
+/* ============ 新增板块响应式 ============ */
+@media (max-width: 1100px) {
+  .about-wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 700px) {
+  .promo-band { padding: 24px 20px 0; }
+  .promo-cap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 12px;
+  }
+  .community-grid { grid-template-columns: 1fr; }
+  .about-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .about-side { padding: 24px; }
+}

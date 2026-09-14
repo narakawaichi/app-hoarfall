@@ -1,0 +1,69 @@
+/* ============ 品牌宣传横幅 ============ */
+.promo-band {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 40px 0;
+}
+.promo-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 1983 / 793;
+  background: var(--surface);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+.promo-frame > a {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.promo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 文字说明移到图片下方，不再覆盖 artwork */
+.promo-cap {
+  margin-top: 24px;
+  padding: 28px 34px;
+  font-family: var(--font-display);
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+.promo-cap h3 {
+  font-size: clamp(18px, 2.6vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.promo-cap p {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-top: 10px;
+  line-height: 1.7;
+  max-width: 640px;
+}
+.promo-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  color: #fff;
+}

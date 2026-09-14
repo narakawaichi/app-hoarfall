@@ -1,0 +1,82 @@
+/* ============ 网站与项目介绍 ============ */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.about-lead p {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+.about-lead p strong {
+  color: var(--text);
+  font-weight: 700;
+}
+.about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+  font-family: var(--font-display);
+}
+.about-pill {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--pink-soft);
+  border: 1px solid rgba(255, 46, 107, 0.3);
+  border-radius: 100px;
+  padding: 7px 16px;
+  background: rgba(255, 46, 107, 0.06);
+}
+.about-side {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  background: var(--surface);
+  font-family: var(--font-display);
+}
+.about-side h4 {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--purple-soft);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.about-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 14px;
+}
+.about-stat:last-child {
+  border-bottom: none;
+}
+.about-stat .k {
+  color: var(--text-dim);
+}
+.about-stat .v {
+  color: var(--text);
+  font-weight: 700;
+}
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  font-family: var(--font-display);
+}
+.about-tags span {
+  font-size: 11px;
+  color: var(--text-dim);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 5px 10px;
+}

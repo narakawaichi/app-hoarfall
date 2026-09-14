@@ -1,0 +1,72 @@
+/* ============ 功能列表 ============ */
+.features-list {
+  display: flex;
+  flex-direction: column;
+}
+.feature-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-soft);
+  align-items: center;
+  position: relative;
+  transition: all 0.4s;
+  cursor: default;
+}
+.feature-row::before {
+  content: '';
+  position: absolute;
+  left: -40px; right: -40px;
+  top: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 46, 107, 0.04), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.feature-row:hover::before { opacity: 1; }
+
+.feature-num {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-dimmer);
+  font-family: 'Noto Sans SC', 'Noto Sans JP', sans-serif;
+}
+.feature-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.feature-body h3 span {
+  font-family: 'Noto Sans SC', 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: var(--text-dimmer);
+  margin-left: 12px;
+  font-weight: 500;
+}
+.feature-body p {
+  font-size: 14px;
+  color: var(--text-dim);
+  max-width: 560px;
+}
+.feature-icon-box {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  transition: all 0.4s;
+  flex-shrink: 0;
+}
+.feature-icon-box svg { width: 26px; height: 26px; }
+.feature-row:hover .feature-icon-box {
+  background: linear-gradient(135deg, rgba(255,46,107,0.15), rgba(139,92,246,0.15));
+  border-color: rgba(255, 46, 107, 0.35);
+  transform: rotate(-6deg) scale(1.05);
+  box-shadow: 0 8px 32px rgba(255, 46, 107, 0.25);
+}
