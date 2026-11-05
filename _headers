@@ -1,11 +1,15 @@
-# HTML 不缓存（Pages _headers 对同名头「先出现的规则生效」，HTML 规则必须放在 /* 之前）：
-# 页面每次向边缘校验，配合 CSS/JS 链接上的 ?v= 版本号实现「发版即生效」
+# HTML 不缓存：每次向边缘校验，配合 CSS/JS 链接上的 ?v= 版本号实现「发版即生效」。
+# 注意：Pages 对同名头会拼接而不是覆盖，所以每条路径只能命中一条 Cache-Control 规则，
+# 资产目录用独立通配规则，不再用全局 /* 设 Cache-Control。
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 /
   Cache-Control: public, max-age=0, must-revalidate
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
 
 /*
-  Cache-Control: public, max-age=31536000, immutable
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
