@@ -9,8 +9,8 @@
   justify-content: space-between;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: linear-gradient(180deg, rgba(7,7,13,0.85), rgba(7,7,13,0.4) 70%, transparent);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(255,245,249,0.85), rgba(255,245,249,0.45) 70%, transparent);
+  border-bottom: 1px solid rgba(214,106,148,0.12);
 }
 
 .nav-brand {

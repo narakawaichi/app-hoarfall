@@ -17,7 +17,7 @@
 .g-item:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 46, 107, 0.4);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 46, 107, 0.15);
+  box-shadow: 0 24px 60px rgba(150, 60, 100, 0.25), 0 0 40px rgba(255, 46, 107, 0.15);
   z-index: 2;
 }
 

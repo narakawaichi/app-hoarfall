@@ -14,7 +14,7 @@
 .comm-card:hover {
   transform: translateY(-6px);
   border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 36px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 24px 60px rgba(150, 60, 100, 0.22), 0 0 36px rgba(139, 92, 246, 0.15);
 }
 .comm-media {
   position: relative;

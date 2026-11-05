@@ -11,7 +11,7 @@
   border: 1px solid var(--border);
   aspect-ratio: 1983 / 793;
   background: var(--surface);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 30px 80px rgba(180, 90, 130, 0.28);
 }
 .promo-frame > a {
   display: block;
@@ -45,7 +45,7 @@
   font-size: clamp(18px, 2.6vw, 30px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--text);
 }
 .promo-cap p {
   font-size: 14px;
@@ -60,10 +60,10 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 7px 13px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(214, 106, 148, 0.35);
   border-radius: 100px;
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(8px);
   flex-shrink: 0;
-  color: #fff;
+  color: var(--text);
 }

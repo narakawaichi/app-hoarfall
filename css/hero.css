@@ -18,24 +18,25 @@
 .hero-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
+  /* 去掉 filter: blur(120px)——大半径模糊 + 无限动画是帧率杀手；
+     radial-gradient 本身渐隐到透明，视觉上几乎无差 */
 }
 .hero-glow-1 {
   width: 700px; height: 700px;
   top: -200px; left: -150px;
-  background: radial-gradient(circle, rgba(255, 46, 107, 0.35), transparent 65%);
+  background: radial-gradient(circle, rgba(255, 46, 107, 0.16), transparent 72%);
   animation: glowPulse 8s ease-in-out infinite;
 }
 .hero-glow-2 {
   width: 800px; height: 800px;
   bottom: -300px; right: -200px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 65%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14), transparent 72%);
   animation: glowPulse 10s ease-in-out infinite 2s;
 }
 .hero-glow-3 {
   width: 500px; height: 500px;
   top: 40%; left: 45%;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 151, 196, 0.10), transparent 75%);
   animation: glowPulse 12s ease-in-out infinite 1s;
 }
 @keyframes glowPulse {
@@ -48,8 +49,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    linear-gradient(rgba(190,100,140,0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190,100,140,0.09) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 30%, transparent 75%);
@@ -67,7 +68,7 @@
   line-height: 1;
   letter-spacing: -0.02em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+  -webkit-text-stroke: 1px rgba(190, 100, 140, 0.12);
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
@@ -174,7 +175,7 @@
 }
 .title-en {
   display: block;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 40%, #8A8AA8 100%);
+  background: linear-gradient(180deg, #3D2338 0%, #3D2338 40%, #C48FA8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -246,7 +247,7 @@
 .btn-primary {
   background: linear-gradient(135deg, var(--pink) 0%, var(--pink-deep) 50%, #7C1DD9 100%);
   box-shadow:
-    0 8px 32px rgba(255, 46, 107, 0.45),
+    0 8px 32px rgba(255, 46, 107, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
   color: #fff;
 }
@@ -260,18 +261,18 @@
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(255, 46, 107, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(255, 46, 107, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 .btn-primary:hover::before { left: 100%; }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(214, 106, 148, 0.3);
   backdrop-filter: blur(12px);
 }
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(214, 106, 148, 0.5);
   transform: translateY(-2px);
 }
 
@@ -328,8 +329,7 @@
 .phone-halo {
   position: absolute;
   inset: -80px;
-  background: radial-gradient(ellipse at center, rgba(255, 46, 107, 0.4), transparent 60%);
-  filter: blur(50px);
+  background: radial-gradient(ellipse at center, rgba(255, 46, 107, 0.22), transparent 68%);
   z-index: -1;
   animation: glowPulse 5s ease-in-out infinite;
 }
@@ -344,7 +344,7 @@
   position: relative;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 40px 80px rgba(0, 0, 0, 0.7),
+    0 40px 80px rgba(120, 50, 85, 0.35),
     0 0 60px rgba(255, 46, 107, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transform-style: preserve-3d;
@@ -390,10 +390,10 @@
   top: 50%;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(61, 35, 56, 0.18);
   background: #0A0A12;
   box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.65),
+    0 25px 60px rgba(140, 60, 95, 0.28),
     0 0 50px rgba(139, 92, 246, 0.18);
   transform-style: preserve-3d;
   z-index: 3;
